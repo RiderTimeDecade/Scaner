@@ -13,8 +13,8 @@ def scan_sensitive_files(url, sensitive_terms):
         
         try:
             # 发起 GET 请求
-            response = requests.get(full_url)
-
+            response = requests.get(full_url,timeout=1)
+            #print(response.url)
             # 检查响应状态码
             if response.status_code == 200:
                 sensitive_files.append(full_url)
