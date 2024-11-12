@@ -3,7 +3,7 @@
 import threading
 from scanner import scan_sensitive_files
 
-def thread_scan(directory, sensitive_terms, max_threads=5):
+def thread_scan(directory, sensitive_terms, max_threads=10):
     """为每个敏感文件扩展名创建线程进行扫描，最多同时运行 max_threads 个线程"""
     threads = []
     active_threads = 0
