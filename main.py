@@ -3,8 +3,8 @@
 import asyncio
 import argparse
 import sys
-from scanner import AsyncScanner
-from dictionary import Dictionary
+from scanner.scanner import AsyncScanner
+from dictionary.dictionary import Dictionary
 from datetime import datetime
 import json
 
@@ -16,7 +16,7 @@ class ScannerCLI:
         parser = argparse.ArgumentParser(description='Advanced Web Directory Scanner')
         parser.add_argument('-u', '--url', required=True, help='Target URL')
         parser.add_argument('-t', '--threads', type=int, default=50, help='Number of concurrent requests')
-        parser.add_argument('-d', '--dict', default='dic.txt', help='Dictionary file path')
+        parser.add_argument('-d', '--dict', default='dictionary/dic.txt', help='Dictionary file path')
         parser.add_argument('-o', '--output', help='Output file path (JSON format)')
         parser.add_argument('--timeout', type=int, default=10, help='Request timeout in seconds')
         return parser
