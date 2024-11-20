@@ -136,6 +136,7 @@ class AsyncScanner:
 {self.COLORS['blue']}{self.COLORS['bold']}
 ╔══════════════════════════════════════════════╗
 ║             Web Directory Scanner            ║
+║                Author: RiderTimeDecade       ║
 ╚══════════════════════════════════════════════╝
 {self.COLORS['reset']}
 [*] Target URLs: {self.total_requests}

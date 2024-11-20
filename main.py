@@ -1,4 +1,5 @@
 # main.py
+# Author: RiderTimeDecade
 
 import asyncio
 import argparse
