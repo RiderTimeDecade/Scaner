@@ -1,4 +1,4 @@
-# Scaner
+# Scanner
 
 一个高性能的 Web 目录扫描工具。
 
@@ -20,20 +20,20 @@
 ## 安装
 
 1. 克隆仓库：
-```
-git clone https://github.com/RiderTimeDecade/Scaner.git
-cd Scaner
-```
+   ```bash
+   git clone https://github.com/RiderTimeDecade/Scanner.git
+   cd Scanner
+   ```
 
 2. 安装依赖：
-```
-pip install aiohttp
-```
+   ```bash
+   pip install aiohttp
+   ```
 
 ## 使用方法
 
 基本用法：
-```
+```bash
 python main.py -u http://example.com -t 50
 ```
 
@@ -43,31 +43,31 @@ python main.py -u http://example.com -t 50
 |------|------|--------|
 | -u, --url | 目标 URL（必需） | - |
 | -t, --threads | 并发线程数 | 50 |
-| -d, --dict | 字典文件路径 | dic.txt |
+| -d, --dict | 字典文件路径 | dictionary/dic.txt |
 | -o, --output | 输出文件路径（JSON） | - |
 | --timeout | 请求超时时间（秒） | 10 |
 
 ### 示例
 
 1. 基本扫描：
-```
-python main.py -u http://example.com
-```
+   ```bash
+   python main.py -u http://example.com
+   ```
 
 2. 高并发扫描：
-```
-python main.py -u http://example.com -t 100
-```
+   ```bash
+   python main.py -u http://example.com -t 100
+   ```
 
 3. 使用自定义字典：
-```
-python main.py -u http://example.com -d custom_dict.txt
-```
+   ```bash
+   python main.py -u http://example.com -d dictionary/custom_dict.txt
+   ```
 
 4. 导出结果：
-```
-python main.py -u http://example.com -o results.json
-```
+   ```bash
+   python main.py -u http://example.com -o results.json
+   ```
 
 ## 项目结构
 
@@ -75,11 +75,14 @@ python main.py -u http://example.com -o results.json
 .
 ├── README.md           # 项目说明文档
 ├── main.py            # 主程序入口
-├── scanner.py         # 扫描器核心实现
-├── dictionary.py      # 字典处理模块
-├── dic.txt            # 默认字典文件
-├── sensitive.txt      # 敏感路径字典
-├── user-agents.txt    # User-Agent 列表
+├── scanner/           # 扫描器核心实现
+│   ├── scanner.py     # 扫描器实现
+│   └── threading_module.py  # 线程模块
+├── dictionary/        # 字典处理模块
+│   ├── dictionary.py  # 字典实现
+│   ├── dic.txt       # 默认字典文件
+│   ├── sensitive.txt  # 敏感路径字典
+│   └── user-agents.txt # User-Agent 列表
 └── screenshot.png      # 演示截图
 ```
 
